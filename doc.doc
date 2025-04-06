@@ -1,0 +1,19 @@
+Insatll rabbitmq into Ubantu 
+
+    sudo apt install rabbitmq-server
+    sudo systemctl enable rabbitmq-server
+    sudo systemctl start rabbitmq-server
+
+    check status:-
+        sudo systemctl status rabbitmq-server
+    
+    Enable rabbitmq web UI Dashboard:-
+        sudo rabbitmq-plugins enable rabbitmq_management
+        Than go to -: http://localhost:15672/ id-guest, pass- guest
+
+
+
+
+Start celery -
+    celery -A app.celery_worker.app worker --loglevel=info
+
